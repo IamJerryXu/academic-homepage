@@ -1,6 +1,6 @@
 """Render a portable, static academic homepage from content.json."""
 from pathlib import Path
-import json,html
+import json,html,hashlib
 ROOT=Path(__file__).parent
 D=json.loads((ROOT/'content.json').read_text())
 e=html.escape
@@ -29,7 +29,7 @@ icons={
 'linkedin':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.2M11 17v-7m0 3c0-4 6-4 6 0v4"/>'}
 def icon(name):return '<svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+icons[name]+'</svg>'
 body=f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yongxue Xu | 徐永雪</title><meta name="description" content="Yongxue Xu, undergraduate at Sun Yat-sen University. Research in video generation, world models, and multimodal spatiotemporal understanding."><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Yongxue Xu | 徐永雪"><meta property="og:description" content="Video generation · World models · 4D understanding"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="morin-base.css"><link rel="stylesheet" href="style.css"><script src="site.js" defer></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yongxue Xu | 徐永雪</title><meta name="description" content="Yongxue Xu, undergraduate at Sun Yat-sen University. Research in video generation, world models, and multimodal spatiotemporal understanding."><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Yongxue Xu | 徐永雪"><meta property="og:description" content="Video generation · World models · 4D understanding"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="morin-base.css?v={hashlib.sha256((ROOT/'dist/morin-base.css').read_bytes()).hexdigest()[:12]}"><link rel="stylesheet" href="style.css?v={hashlib.sha256((ROOT/'dist/style.css').read_bytes()).hexdigest()[:12]}"><script src="site.js?v={hashlib.sha256((ROOT/'dist/site.js').read_bytes()).hexdigest()[:12]}" defer></script></head>
 <body><a class="skip-link" href="#content">Skip to content</a>
 <div class="masthead"><div class="masthead__inner-wrap"><nav class="greedy-nav" aria-label="Main navigation"><ul class="visible-links"><li class="masthead__menu-item"><a href="#about">{tr('Homepage','主页')}</a></li>{''.join('<li class="masthead__menu-item"><a href="#'+i+'">'+tr(en,zh)+'</a></li>' for i,en,zh in [('about','About Me','关于我'),('news','News','动态'),('publications','Publications','论文'),('honors','Honors and Awards','荣誉与奖项'),('education','Education','教育经历')])}</ul></nav><button id="language" type="button" aria-label="切换到中文">中文</button></div></div>
 <div id="main"><aside class="sidebar sticky" aria-label="Profile"><div class="profile_box"><div class="author__avatar"><div class="portrait-frame"><img class="portrait" src="assets/portrait-cv.png" alt="Yongxue Xu" width="163" height="221" fetchpriority="high"></div></div>
