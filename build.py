@@ -33,7 +33,7 @@ body=f'''<!doctype html>
 <body><a class="skip-link" href="#content">Skip to content</a>
 <div class="masthead"><div class="masthead__inner-wrap"><nav class="greedy-nav" aria-label="Main navigation"><ul class="visible-links"><li class="masthead__menu-item"><a href="#about">{tr('Homepage','主页')}</a></li>{''.join('<li class="masthead__menu-item"><a href="#'+i+'">'+tr(en,zh)+'</a></li>' for i,en,zh in [('about','About Me','关于我'),('news','News','动态'),('publications','Publications','论文'),('honors','Honors and Awards','荣誉与奖项'),('education','Education','教育经历')])}</ul></nav><button id="language" type="button" aria-label="切换到中文">中文</button></div></div>
 <div id="main"><aside class="sidebar sticky" aria-label="Profile"><div class="profile_box"><div class="author__avatar"><div class="portrait-frame"><img class="portrait" src="assets/portrait-cv.png" alt="Yongxue Xu" width="163" height="221" fetchpriority="high"></div></div>
-<div class="author__content"><h1 class="author__name">Yongxue Xu <span class="name-zh" lang="zh-CN">徐永雪</span></h1><p class="author__bio">{tr('Undergraduate Student','本科生')}</p></div>
+<div class="author__content"><h1 class="author__name">Yongxue Xu</h1><p class="author__bio">{tr('Undergraduate Student','本科生')}</p></div>
 <div class="author__urls-wrapper"><p class="research-interests">{tr('<span>Video generation</span><span>World models</span><span>4D scene understanding</span><span>World-action models</span>','<span>视频生成</span><span>世界模型</span><span>4D 场景理解</span><span>世界-动作模型</span>')}</p><ul class="author__urls social-icons">
 <li><a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener">{icon('pin')}{tr('Sun Yat-sen University','中山大学')}</a></li>
 <li><a href="mailto:jiangjiangcheng753@gmail.com">{icon('email')}Email</a></li>
