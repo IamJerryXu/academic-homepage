@@ -34,4 +34,3 @@ html{scroll-behavior:smooth;scroll-padding-top:85px}body{background:#fff}button,
 
 @media(min-width:925px){.page__content #about p{text-align:justify;text-align-last:left}}
 
-.news-highlight{font-weight:700;color:#986215;background:#fff3ce;padding:1px 4px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
