@@ -31,3 +31,5 @@ html{scroll-behavior:smooth;scroll-padding-top:85px}body{background:#fff}button,
 
 .sidebar .research-interests{text-align:left;text-align-last:auto;word-spacing:normal;letter-spacing:normal;text-wrap:pretty;hyphens:none}
 @media(min-width:925px){.sidebar .research-interests{width:calc(100% + 24px)}}
+
+@media(min-width:925px){.page__content #about p{text-align:justify;text-align-last:left}}
