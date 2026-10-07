@@ -27,7 +27,10 @@ icons={
 'pin':'<path d="M19 10c0 5-7 12-7 12S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/>',
 'cv':'<path d="M5 2h10l4 4v16H5zM15 2v5h4M8 12h8M8 16h8"/>',
 'linkedin':'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.2M11 17v-7m0 3c0-4 6-4 6 0v4"/>'}
-def icon(name):return '<svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+icons[name]+'</svg>'
+def icon(name):
+ if name=='pin':
+  return '<svg class="contact-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com - Icons licensed CC BY 4.0: https://creativecommons.org/licenses/by/4.0/ --><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0z"/></svg>'
+ return '<svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+icons[name]+'</svg>'
 body=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yongxue Xu | 徐永雪</title><meta name="description" content="Yongxue Xu, undergraduate at Sun Yat-sen University. Research in video generation, world models, and multimodal spatiotemporal understanding."><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Yongxue Xu | 徐永雪"><meta property="og:description" content="Video generation · World models · 4D understanding"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="morin-base.css?v={hashlib.sha256((ROOT/'dist/morin-base.css').read_bytes()).hexdigest()[:12]}"><link rel="stylesheet" href="style.css?v={hashlib.sha256((ROOT/'dist/style.css').read_bytes()).hexdigest()[:12]}"><script src="site.js?v={hashlib.sha256((ROOT/'dist/site.js').read_bytes()).hexdigest()[:12]}" defer></script></head>
 <body><a class="skip-link" href="#content">Skip to content</a>
