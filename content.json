@@ -31,8 +31,8 @@
     ],
     [
       "2026-09-09",
-      "We release <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> for editable research figures—nearly 150 GitHub stars ✨!",
-      "我们发布了 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a>，参考驱动的可编辑科研绘图工作流，已收获近 150 GitHub stars ✨！"
+      "We release <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> for editable research figures with GPT-6 Astra—nearly 150 GitHub stars ✨!",
+      "我们发布了 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a>，面向 GPT-6 Astra 的可编辑科研绘图工作流，已收获近 150 GitHub stars ✨！"
     ],
     [
       "2026-07-30",
@@ -50,7 +50,7 @@
       "我们发布了 <a href=\"#track4d\">LMM-Track4D</a>，通过轨迹对话实现 4D 动态推理。"
     ],
     [
-      "2025-09-04",
+      "2025-11-04",
       "Our work on <a href=\"#road\">critical-node identification</a> receives the <strong>GBCESC 2025 Best Paper Award</strong>.",
       "我们的<a href=\"#road\">关键节点识别</a>研究获得 <strong>GBCESC 2025 最佳论文奖</strong>。"
     ]
