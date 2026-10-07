@@ -186,8 +186,20 @@
       "period_zh": "2026.06 – 至今",
       "title_en": "Research Intern, <a href=\"https://sysu-hcp.net/\" target=\"_blank\" rel=\"noopener noreferrer\">HCP Lab</a>, Prof. <a href=\"https://scholar.google.com/citations?user=voxznZAAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">Xiaodan Liang</a>’s Group",
       "title_zh": "科研实习生，<a href=\"https://sysu-hcp.net/\" target=\"_blank\" rel=\"noopener noreferrer\">HCP 实验室</a>，<a href=\"https://scholar.google.com/citations?user=voxznZAAAAAJ&amp;hl=en\" target=\"_blank\" rel=\"noopener noreferrer\">梁小丹</a>老师课题组",
-      "description_en": "Research on embodied world-action models (WAMs), exploring their potential to learn from failures.",
-      "description_zh": "开展具身世界-动作模型（WAM）研究，探索从失败经历中学习的可能性。"
+      "highlights": [
+        [
+          "Research on embodied world-action models (WAMs) for robotic learning and decision-making.",
+          "开展面向机器人学习与决策的具身世界-动作模型（WAM）研究。"
+        ],
+        [
+          "Explore how embodied agents can learn and adapt from failures.",
+          "探索具身智能从失败经历中学习与适应的可能性。"
+        ],
+        [
+          "Investigate the potential of world models for long-horizon tasks and reliable policy evaluation.",
+          "探索世界模型在长程任务与可靠策略评估中的应用潜力。"
+        ]
+      ]
     }
   ]
 }
