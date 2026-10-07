@@ -15,6 +15,11 @@
   ],
   "news": [
     [
+      "2026-10-07",
+      "Our project <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> has earned <strong class=\"news-highlight\">nearly 150 GitHub stars ⭐</strong>!",
+      "我们的项目 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> 已收获 <strong class=\"news-highlight\">近 150 GitHub stars ⭐</strong>！"
+    ],
+    [
       "2026-09-24",
       "We release <a href=\"#last\">LaST</a>, preserving object geometry and appearance across occlusion and reappearance in long-video generation.",
       "我们发布了 <a href=\"#last\">LaST</a>，在长视频生成中保持对象遮挡或离开视野后重现时的几何与外观一致性。"
@@ -85,7 +90,7 @@
           "https://arxiv.org/abs/2609.25692"
         ]
       ],
-      "image": "evigda.png",
+      "image": "evigda-overview.png",
       "venue": "Submitted to ICLR 2027",
       "venue_zh": "已投稿 ICLR 2027"
     },
