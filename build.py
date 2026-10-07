@@ -10,7 +10,7 @@ def tr(en,zh,tag='span',cls=''):
 def news(n):
  return f'<li><time datetime="{n[0]}">{n[0].replace("-",".")}</time><span class="news-celebration" aria-hidden="true">🎉🎉</span> <div>'+tr(n[1],n[2])+'</div></li>'
 def internship(n):
- return '<li><em>'+tr(n['period_en'],n['period_zh'])+'</em>, '+tr(n['title_en'],n['title_zh'])+'<ul>'+''.join('<li>'+tr(en,zh)+'</li>' for en,zh in n['highlights'])+'</ul></li>'
+ return '<li><em>'+tr(n['period_en'],n['period_zh'])+'</em>, '+tr(n['title_en'],n['title_zh'])+'<p class="internship-description">'+tr(n['description_en'],n['description_zh'])+'</p></li>'
 def paper(p):
  links=''
  for label,url in p['links']:
