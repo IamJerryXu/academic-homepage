@@ -9,6 +9,8 @@ def tr(en,zh,tag='span',cls=''):
  return f'<{tag}'+(f' class="{cls}"' if cls else '')+f' data-en="{e(en,quote=True)}" data-zh="{e(zh,quote=True)}">{en}</{tag}>'
 def news(n):
  return f'<li><time datetime="{n[0]}">{n[0].replace("-",".")}</time><span class="news-celebration" aria-hidden="true">🎉🎉</span> <div>'+tr(n[1],n[2])+'</div></li>'
+def internship(n):
+ return '<li><em>'+tr(n['period_en'],n['period_zh'])+'</em>, '+tr(n['title_en'],n['title_zh'])+'<ul><li>'+tr(n['description_en'],n['description_zh'])+'</li></ul></li>'
 def paper(p):
  links=''
  for label,url in p['links']:
@@ -34,7 +36,7 @@ def icon(name):
 body=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yongxue Xu | 徐永雪</title><meta name="description" content="Yongxue Xu, undergraduate at Sun Yat-sen University. Research in video generation, world models, and multimodal spatiotemporal understanding."><meta name="theme-color" content="#ffffff"><meta property="og:title" content="Yongxue Xu | 徐永雪"><meta property="og:description" content="Video generation · World models · 4D understanding"><meta property="og:type" content="website"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="morin-base.css?v={hashlib.sha256((ROOT/'dist/morin-base.css').read_bytes()).hexdigest()[:12]}"><link rel="stylesheet" href="style.css?v={hashlib.sha256((ROOT/'dist/style.css').read_bytes()).hexdigest()[:12]}"><script src="site.js?v={hashlib.sha256((ROOT/'dist/site.js').read_bytes()).hexdigest()[:12]}" defer></script></head>
 <body><a class="skip-link" href="#content">Skip to content</a>
-<div class="masthead"><div class="masthead__inner-wrap"><nav class="greedy-nav" aria-label="Main navigation"><ul class="visible-links"><li class="masthead__menu-item"><a href="#about">{tr('Homepage','主页')}</a></li>{''.join('<li class="masthead__menu-item"><a href="#'+i+'">'+tr(en,zh)+'</a></li>' for i,en,zh in [('about','About Me','关于我'),('news','News','动态'),('publications','Publications','论文'),('honors','Honors and Awards','荣誉与奖项'),('education','Education','教育经历')])}</ul></nav><button id="language" type="button" aria-label="切换到中文">中文</button></div></div>
+<div class="masthead"><div class="masthead__inner-wrap"><nav class="greedy-nav" aria-label="Main navigation"><ul class="visible-links"><li class="masthead__menu-item"><a href="#about">{tr('Homepage','主页')}</a></li>{''.join('<li class="masthead__menu-item"><a href="#'+i+'">'+tr(en,zh)+'</a></li>' for i,en,zh in [('about','About Me','关于我'),('news','News','动态'),('publications','Publications','论文'),('honors','Honors and Awards','荣誉与奖项'),('education','Education','教育经历'),('internships','Internships','实习经历')])}</ul></nav><button id="language" type="button" aria-label="切换到中文">中文</button></div></div>
 <div id="main"><aside class="sidebar sticky" aria-label="Profile"><div class="profile_box"><div class="author__avatar"><div class="portrait-frame"><img class="portrait" src="assets/portrait-cv.png" alt="Yongxue Xu" width="163" height="221" fetchpriority="high"></div></div>
 <div class="author__content"><h1 class="author__name">Yongxue Xu</h1><p class="author__bio">{tr('Undergraduate Student','本科生')}</p></div>
 <div class="author__urls-wrapper"><p class="research-interests">{tr('Research interests span 4D scene understanding, video generation, world models, and world&#8209;action models.','研究兴趣涵盖 4D 场景理解、视频生成、世界模型与世界-动作模型。')}</p><ul class="author__urls social-icons">
@@ -55,6 +57,7 @@ body=f'''<!doctype html>
 <section id="publications"><h2>📝 {tr('Selected Publications','代表论文')}</h2><p class="publication-note">{tr('* Equal contribution; † Corresponding author','* 共同一作；† 通讯作者')}</p>{''.join(paper(p) for p in D['papers'])}</section>
 <section id="honors"><h2>🎖 {tr('Honors and Awards','荣誉与奖项')}</h2><ul class="honors-list">{''.join('<li><span>'+tr(h[0],h[1])+'</span><time>'+h[2]+'</time></li>' for h in D['honors'])}</ul></section>
 <section id="education"><h2>📖 {tr('Education','教育经历')}</h2><div class="education-row"><div><strong>{tr('Sun Yat-sen University','中山大学')}</strong><p>{tr('B.Eng. in Intelligent Science and Technology (in progress)','智能科学与技术 · 工学学士（在读）')}</p><p>{tr('School of Intelligent Systems Engineering','智能工程学院')}</p></div><span class="date">2023.09 – 2027.06<br><small>{tr('(expected)','（预计）')}</small></span></div></section>
+<section id="internships"><h2>💻 {tr('Internships','实习经历')}</h2><ul class="internship-list">{''.join(internship(n) for n in D['internships'])}</ul></section>
 </div></div></main></div>
 <dialog id="figure-dialog" aria-labelledby="figure-caption"><button class="close-figure" type="button" aria-label="Close figure">×</button><img id="figure-full" alt=""><p id="figure-caption"></p></dialog>
 <dialog id="wechat-dialog" aria-labelledby="wechat-title"><button id="wechat-close" type="button" aria-label="Close WeChat QR code">×</button><h2 id="wechat-title">{tr('Connect on WeChat','添加微信')}</h2><img src="assets/wechat-card.webp" alt="Yongxue Xu's WeChat QR code" width="720" height="917"><p>{tr('Scan the QR code to add me on WeChat.','扫描二维码，添加我的微信。')}</p></dialog>
