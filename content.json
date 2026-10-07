@@ -31,8 +31,8 @@
     ],
     [
       "2026-09-09",
-      "We release <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> for editable research figures with GPT-6 Astra—nearly 150 GitHub stars ✨!",
-      "我们发布了 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a>，面向 GPT-6 Astra 的可编辑科研绘图工作流，已收获近 150 GitHub stars ✨！"
+      "We release <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> for editable research figures with GPT-6 Astra—<strong>nearly 150 GitHub stars</strong> 🎉🎉!",
+      "我们发布了 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a>，面向 GPT-6 Astra 的可编辑科研绘图工作流，已收获<strong>近 150 GitHub stars</strong> 🎉🎉！"
     ],
     [
       "2026-07-30",
@@ -63,7 +63,7 @@
       "authors": "<strong>Yongxue Xu</strong> and Harry Yang<sup>&dagger;</sup>",
       "bib": "@misc{xu2026last,\n  title={LaST: Latent State Tracking for Persistent Object Memory in Video World Models},\n  author={Xu, Yongxue and Yang, Harry},\n  year={2026},\n  note={Submitted to ICLR 2027. Corresponding author: Harry Yang}\n}",
       "links": [],
-      "image": "last.png",
+      "image": "last-demo.png",
       "venue": "Submitted to ICLR 2027",
       "venue_zh": "已投稿 ICLR 2027"
     },

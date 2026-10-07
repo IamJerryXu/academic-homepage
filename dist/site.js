@@ -54,3 +54,13 @@ if ('IntersectionObserver' in window) {
   }, {rootMargin:'-10% 0px -65% 0px',threshold:0});
   document.querySelectorAll('.page__content > section[id]').forEach(section => observer.observe(section));
 }
+
+const wechatDialog = document.querySelector('#wechat-dialog');
+const wechatButton = document.querySelector('#wechat-open');
+wechatButton.addEventListener('click', () => wechatDialog.showModal());
+document.querySelector('#wechat-close').addEventListener('click', () => wechatDialog.close());
+wechatDialog.addEventListener('click', event => {
+  const r = wechatDialog.getBoundingClientRect();
+  if (event.target === wechatDialog && (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom)) wechatDialog.close();
+});
+wechatDialog.addEventListener('close', () => wechatButton.focus({preventScroll:true}));

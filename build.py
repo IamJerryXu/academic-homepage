@@ -46,6 +46,8 @@ body=f'''<!doctype html>
 <li><a href="https://www.linkedin.com/in/%E6%B0%B8%E9%9B%AA-%E5%BE%90-6340a4415/" target="_blank" rel="noopener">{icon('linkedin')}LinkedIn</a></li>
 <li><a href="assets/Yongxue_Xu_CV_EN.pdf" target="_blank" rel="noopener">{icon('cv')}CV (EN)</a></li>
 <li><a href="assets/Yongxue_Xu_CV_ZH.pdf" target="_blank" rel="noopener" lang="zh-CN">{icon('cv')}中文简历</a></li>
+<li><button id="wechat-open" type="button" aria-haspopup="dialog" aria-controls="wechat-dialog"><img class="contact-icon" src="assets/wechat.svg" alt="" aria-hidden="true">{tr('WeChat','微信')}</button></li>
+<li><a href="https://xhslink.cn/o/60IapESrKEh" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="assets/rednote.svg" alt="" aria-hidden="true">{tr('Rednote','小红书')}</a></li>
 </ul></div></div></aside>
 <main class="page" id="content"><div class="page__inner-wrap"><div class="page__content">
 <section id="about" aria-label="About Me"><p>{' '.join(tr(x[0],x[1]) for x in D['bio'])} {tr('I welcome research collaborations and internship opportunities in multimodal foundation models. Feel free to <a href="mailto:jiangjiangcheng753@gmail.com">contact me</a>.','欢迎多模态基础模型方向的科研合作与实习交流，欢迎通过<a href="mailto:jiangjiangcheng753@gmail.com">邮件联系我</a>。')}</p></section>
@@ -55,6 +57,7 @@ body=f'''<!doctype html>
 <section id="education"><h2>📖 {tr('Education','教育经历')}</h2><div class="education-row"><div><strong>{tr('Sun Yat-sen University','中山大学')}</strong><p>{tr('B.Eng. in Intelligent Science and Technology (in progress)','智能科学与技术 · 工学学士（在读）')}</p><p>{tr('School of Intelligent Systems Engineering','智能工程学院')}</p></div><span class="date">2023.09 – 2027.06<br><small>{tr('(expected)','（预计）')}</small></span></div></section>
 </div></div></main></div>
 <dialog id="figure-dialog" aria-labelledby="figure-caption"><button class="close-figure" type="button" aria-label="Close figure">×</button><img id="figure-full" alt=""><p id="figure-caption"></p></dialog>
+<dialog id="wechat-dialog" aria-labelledby="wechat-title"><button id="wechat-close" type="button" aria-label="Close WeChat QR code">×</button><h2 id="wechat-title">{tr('Connect on WeChat','添加微信')}</h2><img src="assets/wechat-card.webp" alt="Yongxue Xu's WeChat QR code" width="720" height="917"><p>{tr('Scan the QR code to add me on WeChat.','扫描二维码，添加我的微信。')}</p></dialog>
 </body></html>'''
 (ROOT/'dist/index.html').write_text(body)
 print('Rendered index.html with',len(D['papers']),'publications and',len(D['news']),'news entries.')
