@@ -15,11 +15,6 @@
   ],
   "news": [
     [
-      "2026-10-07",
-      "Our project <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> has earned nearly 150 GitHub stars ✨!",
-      "我们的项目 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a> 已收获 近 150 GitHub stars ✨！"
-    ],
-    [
       "2026-09-24",
       "We release <a href=\"#last\">LaST</a>, preserving object geometry and appearance across occlusion and reappearance in long-video generation.",
       "我们发布了 <a href=\"#last\">LaST</a>，在长视频生成中保持对象遮挡或离开视野后重现时的几何与外观一致性。"
@@ -33,6 +28,11 @@
       "2026-09-12",
       "We release <a href=\"#evigda\">EviGDA</a>, exploring complementary evidence beyond representation learning for graph domain adaptation.",
       "我们发布了 <a href=\"#evigda\">EviGDA</a>，通过互补证据融合，将图领域适应延伸到表示学习之外。"
+    ],
+    [
+      "2026-09-09",
+      "We release <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a>, a reference-guided workflow for creating editable research figures. Now at nearly 150 GitHub stars ✨!",
+      "我们发布了 <a href=\"https://github.com/IamJerryXu/AstraDraw\" target=\"_blank\" rel=\"noopener noreferrer\">AstraDraw</a>，结合论文与视觉参考生成可编辑科研图的工作流，目前已收获近 150 GitHub stars ✨！"
     ],
     [
       "2026-07-30",
