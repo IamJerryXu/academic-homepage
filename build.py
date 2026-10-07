@@ -35,7 +35,8 @@ body=f'''<!doctype html>
 <div id="main"><aside class="sidebar sticky" aria-label="Profile"><div class="profile_box"><div class="author__avatar"><div class="portrait-frame"><img class="portrait" src="assets/portrait-cv.png" alt="Yongxue Xu" width="163" height="221" fetchpriority="high"></div></div>
 <div class="author__content"><h1 class="author__name">Yongxue Xu</h1><p class="author__bio">{tr('Undergraduate Student','本科生')}</p></div>
 <div class="author__urls-wrapper"><p class="research-interests">{tr('Research interests span video generation, world models, 4D scene understanding, and world-action models.','研究兴趣涵盖视频生成、世界模型、4D 场景理解与世界-动作模型。')}</p><ul class="author__urls social-icons">
-<li><a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener">{icon('pin')}{tr('Sun Yat-sen University','中山大学')}</a></li>
+<li class="profile-location">{icon('pin')}{tr('Shenzhen, China','中国 · 深圳')}</li>
+<li class="profile-university"><a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener">{icon('pin')}{tr('Sun Yat-sen University','中山大学')}</a></li>
 <li><a href="mailto:jiangjiangcheng753@gmail.com">{icon('email')}Email</a></li>
 <li><a href="https://scholar.google.com/citations?user=8PtwUrkAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">{icon('scholar')}Scholar</a></li>
 <li><a href="https://github.com/IamJerryXu" target="_blank" rel="noopener">{icon('github')}GitHub</a></li>
