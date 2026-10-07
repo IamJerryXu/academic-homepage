@@ -49,3 +49,12 @@ html{scroll-behavior:smooth;scroll-padding-top:85px}body{background:#fff}button,
 @media(min-width:925px){
   .sidebar .research-interests{width:100%;line-height:1.5}
 }
+
+/* A little breathing room between profile sections, without stretching the sidebar. */
+@media(min-width:925px){
+  .sidebar{--profile-space:clamp(0px,calc((100dvh - 650px)*.12),12px)}
+  .sidebar .author__name{margin-top:calc(10px + var(--profile-space))}
+  .sidebar .author__bio{margin-bottom:calc(12px + var(--profile-space))}
+  .sidebar .research-interests{margin-bottom:calc(18px + var(--profile-space))}
+}
+#evigda .figure-button img{box-sizing:border-box;padding:6px;background:#fff}
