@@ -49,7 +49,7 @@ body=f'''<!doctype html>
 <section id="publications"><h2>📝 {tr('Selected Publications','代表论文')}</h2><p class="publication-note">{tr('* Equal contribution; † Corresponding author','* 共同一作；† 通讯作者')}</p>{''.join(paper(p) for p in D['papers'])}</section>
 <section id="honors"><h2>🎖 {tr('Honors and Awards','荣誉与奖项')}</h2><ul class="honors-list">{''.join('<li><span>'+tr(h[0],h[1])+'</span><time>'+h[2]+'</time></li>' for h in D['honors'])}</ul></section>
 <section id="education"><h2>📖 {tr('Education','教育经历')}</h2><div class="education-row"><div><strong>{tr('Sun Yat-sen University','中山大学')}</strong><p>{tr('B.Eng. in Intelligent Science and Technology (in progress)','智能科学与技术 · 工学学士（在读）')}</p><p>{tr('School of Intelligent Systems Engineering','智能工程学院')}</p></div><span class="date">2023.09 – 2027.06<br><small>{tr('(expected)','（预计）')}</small></span></div></section>
-<footer><span>© 2026 Yongxue Xu</span><span>{tr('Updated October 2026','更新于 2026 年 10 月')}</span><a href="#about">{tr('Back to top ↑','返回顶部 ↑')}</a></footer></div></div></main></div>
+</div></div></main></div>
 <dialog id="figure-dialog" aria-labelledby="figure-caption"><button class="close-figure" type="button" aria-label="Close figure">×</button><img id="figure-full" alt=""><p id="figure-caption"></p></dialog>
 </body></html>'''
 (ROOT/'dist/index.html').write_text(body)
